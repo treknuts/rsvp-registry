@@ -15,7 +15,7 @@ const RSVP = () => {
 
   return (
     <div>
-      <form classNameName="w-full max-w-sm">
+      <form className="w-full max-w-sm">
         <h1 className="text-3xl font-bold mb-12">Let us know you're coming!</h1>
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
