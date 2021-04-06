@@ -110,8 +110,8 @@ const RSVP = () => {
 
   return (
     <div>
-      <form className="w-full max-w-lg">
-        <h1 className="lg:text-2xl text-lg font-bold mb-12">
+      <form className="font-normal w-full max-w-lg">
+        <h1 className="lg:text-2xl text-lg font-light mb-12">
           Let us know you're coming!
         </h1>
         <div className="md:grid text-base lg:text-lg md:grid-cols-2 gap-2">

@@ -803,7 +803,7 @@ module.exports = {
     clear: ["responsive"],
     container: ["responsive"],
     cursor: ["responsive", "hover"],
-    display: ["responsive"],
+    display: ["hover", "responsive"],
     divideColor: ["responsive", "dark"],
     divideOpacity: ["responsive", "dark"],
     divideStyle: ["responsive"],

@@ -1,7 +1,7 @@
 import Main from "./components/Main";
 import {
-  faBook,
   faCheck,
+  faBook,
   faGifts,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
@@ -40,51 +40,48 @@ function App() {
   };
 
   return (
-    <div className="lg:flex flex-col h-screen w-screen font-sans">
-      <div className="absolute my-8 flex text-xl text-blue font-bold bottom-0 h-12 w-screen shadow-2xl md:flex-col lg:inset-y-0 lg:left-0 lg:h-5/6 lg:w-64 lg:shadow-2xl lg:rounded-2xl bg-pink-200 lg:transition lg:ease-in-out lg:transform lg:hover:translate-x-3">
-        <div
+    <div className="w-screen h-screen m-0 p-0 overflow-y-scroll">
+      <div className="bg-pink-200 text-blue font-semibold rounded-2xl fixed flex bottom-0 h-12 w-screen md:h-26 justify-center bg-cyan-400 lg:flex-col lg:justify-evenly lg:left-0 lg:h-screen lg:w-2/12 z-10">
+        <ul className="flex justify-center md:justify-center items-center md:flex-col">
+        <li
           id="rsvp"
-          onClick={handleClick}
-          className="relative hover:animate-bounce hover:cursor-pointer lg:hover:animate-none flex items-center justify-center rounded-2xl lg:w-full w-8 lg:my-auto lg:pl-12 lg:h-12 mx-auto hover:bg-blue hover:text-pink-200"
+        onClick={handleClick}
+          className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 items-center focus:outline-black"
         >
-          <p className="relative hidden lg:contents lg:mx-auto" href="#">
-            RSVP
-          </p>
-          <FontAwesomeIcon className="color-blue lg:mx-auto" icon={faCheck} />
-        </div>
-        <div
+              <span className="hidden md:contents">RSVP</span>
+            <FontAwesomeIcon id="rsvp" onClick={handleClick} className="color-blue lg:mx-auto" icon={faCheck} pull="left"/>
+        </li>
+        <li
           id="info"
           onClick={handleClick}
-          className="relative hover:animate-bounce hover:cursor-pointer lg:hover:animate-none flex items-center justify-center rounded-2xl lg:w-full w-8 lg:my-auto lg:pl-12 lg:h-12 mx-auto hover:bg-blue hover:text-pink-200"
+          className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
         >
-          <a className="hidden lg:contents lg:mx-auto" href="#">
-            Info
-          </a>
-          <FontAwesomeIcon className="my-auto lg:mx-auto" icon={faInfoCircle} />
-        </div>
-        <div
+          <span className="hidden md:contents">Info</span>
+          <FontAwesomeIcon id="info" onClick={handleClick} className="my-auto lg:mx-auto" icon={faInfoCircle}  pull="left"/>
+        </li>
+        <li
           id="registry"
           onClick={handleClick}
-          className="relative hover:animate-bounce hover:cursor-pointer lg:hover:animate-none flex items-center justify-center rounded-2xl lg:w-full w-8 lg:my-auto lg:pl-12 lg:h-12 mx-auto hover:bg-blue hover:text-pink-200"
+          className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
         >
-          <p className="hidden lg:contents lg:mx-auto" href="#">
-            Registry
-          </p>
-          <FontAwesomeIcon className="my-auto lg:mx-auto" icon={faGifts} />
-        </div>
-        <div
+            <span className="hidden md:contents">Registry</span>
+          <FontAwesomeIcon id="registry" onClick={handleClick} className="my-auto lg:mx-auto" icon={faGifts}  pull="left"/>
+        </li>
+        <li
           id="about"
           onClick={handleClick}
-          className="relative hover:animate-bounce lg:hover:animate-none hover:cursor-pointer flex items-center justify-center lg:justify-evenly rounded-2xl lg:w-full lg:pl-12 w-8 lg:my-auto lg:h-12 mx-auto hover:bg-blue hover:text-pink-200"
+          className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
         >
-          <p className="hidden lg:contents sm:mx-auto" href="#">
-            Our Story
-          </p>
+          <span className="hidden md:contents">Our Story</span>
           <FontAwesomeIcon
+            id="about"
             className="color-blue my-auto lg:mx-auto"
+            onClick={handleClick} 
+            pull="left"
             icon={faBook}
           />
-        </div>
+        </li>
+        </ul>
       </div>
       <Main
         isRSVP={isRSVP}
