@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import RSVP from "./RSVP";
 import Registry from "./Registry";
 import About from "./About";

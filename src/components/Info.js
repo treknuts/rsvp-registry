@@ -4,13 +4,13 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Info = () => {
   return (
-    <div class="grid gap-2 md:gap-5 grid-cols-1 md:grid-cols-2 md:text-center">
-      <div class="font-extralight md:col-span-2 text-center text-lg md:text-2xl">
+    <div className="grid gap-2 md:gap-5 grid-cols-1 md:grid-cols-2 md:text-center">
+      <div className="font-extralight md:col-span-2 text-center text-lg md:text-2xl">
         Both the Ceremony and Reception will be held on <br />
         Friday, June 10th 2022
       </div>
-      <div class="font-extralight text-lg md:text-2xl">The Ceremony</div>
-      <div class="bg-blue text-white font-normal rounded-lg p-3 text-center text-base md:text-xl">
+      <div className="font-extralight text-lg md:text-2xl">The Ceremony</div>
+      <div className="bg-blue text-white font-normal rounded-lg p-3 text-center text-base md:text-xl">
         <ul>
           <li>Hoge Island</li>
           <li>time tbd</li>
@@ -25,10 +25,10 @@ const Info = () => {
             </li>
           </ul>
         </div>
-        <div class="font-extralight text-lg md:text-2xl">
+        <div className="font-extralight text-lg md:text-2xl">
           The Reception
         </div>
-        <div class="bg-green text-white font-normal rounded-lg p-3 text-center text-base md:text-xl">
+        <div className="bg-green text-white font-normal rounded-lg p-3 text-center text-base md:text-xl">
           <ul>
             <li>Radisson Hotel</li>
             <li>

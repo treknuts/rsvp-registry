@@ -119,7 +119,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="first-name"
+                htmlFor="first-name"
               >
                 First
               </label>
@@ -138,7 +138,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                for="last-name"
+                htmlFor="last-name"
               >
                 Last
               </label>
@@ -157,7 +157,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="email"
+                htmlFor="email"
               >
                 Email
               </label>
@@ -176,7 +176,7 @@ const RSVP = () => {
             <div className="md:w-2/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="members"
+                htmlFor="members"
               >
                 Number Attending
               </label>
@@ -189,7 +189,7 @@ const RSVP = () => {
                 onChange={handleChange}
               >
                 {[1, 2, 3, 4, 5].map((num) => {
-                  return <option value={num}>{num}</option>;
+                  return <option key={num} value={num}>{num}</option>;
                 })}
               </select>
             </div>
@@ -198,7 +198,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="addrLine1"
+                htmlFor="addrLine1"
               >
                 Address Line 1
               </label>
@@ -217,7 +217,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="addrLine2"
+                htmlFor="addrLine2"
               >
                 Address Line 2
               </label>
@@ -237,7 +237,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="city"
+                htmlFor="city"
               >
                 City
               </label>
@@ -256,7 +256,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                for="state"
+                htmlFor="state"
               >
                 State
               </label>
@@ -269,7 +269,7 @@ const RSVP = () => {
                 onChange={handleChange}
               >
                 {states.map((state) => {
-                  return <option value={state}>{state}</option>;
+                  return <option key={state} value={state}>{state}</option>;
                 })}
               </select>
             </div>
@@ -278,7 +278,7 @@ const RSVP = () => {
             <div className="md:w-1/3">
               <label
                 className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4"
-                for="zip"
+                htmlFor="zip"
               >
                 Zip
               </label>
