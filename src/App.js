@@ -41,8 +41,8 @@ function App() {
 
   return (
     <div className="w-screen h-screen m-0 p-0 overflow-x-hidden overflow-y-scroll">
-      <div className="bg-pink-200 text-blue font-semibold rounded-2xl fixed flex bottom-0 h-12 w-screen md:h-26 justify-center bg-cyan-400 lg:flex-col lg:justify-evenly lg:left-0 lg:h-screen lg:w-48 z-10">
-        <ul className="flex justify-center md:justify-center items-center md:flex-col">
+      <div className="bg-green md:bg-pink-200 text-blue font-semibold rounded-2xl fixed flex bottom-0 h-12 w-screen md:h-26 justify-center md:flex-col md:justify-evenly md:left-0 md:h-screen md:w-48 transition-transform z-10 md:transition md:transform md:hover:translate-x-1">
+        <ul className="relative flex justify-evenly md:flex-col">
           <li
             id="rsvp"
             onClick={handleClick}
