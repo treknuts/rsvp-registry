@@ -18,6 +18,7 @@ const Info = () => {
               <a 
               href="https://www.google.com/maps/dir//8520+Burnt+Creek+Island+Rd,+Bismarck,+ND+58503/@46.8980895,-100.9311767,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x52d787065d27c66f:0xb81727576c8b56e2!2m2!1d-100.8960715!2d46.8980362!3e0"
               target="_blank"
+              rel="noreferrer"
               >
                 <FontAwesomeIcon size="2x" icon={faMapMarkerAlt} />
               </a>
@@ -33,7 +34,9 @@ const Info = () => {
             <li>
               <a 
                 href="https://www.google.com/maps/dir//605+E+Broadway+Ave,+Bismarck,+ND+58501/@46.8061321,-100.817732,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x52d7831692a9c993:0x4fcd4d8dffed1e2!2m2!1d-100.7826268!2d46.8060787"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer"
+                >
                 <FontAwesomeIcon size="2x" icon={faMapMarkerAlt} />
               </a>
             </li>
