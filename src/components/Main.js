@@ -7,7 +7,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 const Main = (props) => {
   return (
-    <div className="md:ml-96 my-8 h-screen md:h-screen w-full md:py-24 bg-cyan-400 md:w-6/12">
+    <div className="md:ml-96 my-8 h-screen md:h-screen w-full md:py-10 bg-cyan-400 md:w-6/12">
       <div className="relative py-3 lg:min-w-xl lg:mx-auto">
         <div className="absolute inset-0 shadow-2xl transform bg-gradient-to-r from-blue to-green -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="relative px-4 py-10 bg-pink-200 shadow-2xl sm:rounded-3xl sm:p-20">
