@@ -9,6 +9,14 @@ function App() {
       <BrowserRouter>
         <div className="navbar">
           <ul className="navbar-nav">
+            <li className="logo">
+              <Link to="/" className="nav-link">
+                <span className="link-text logo-text">Trev+Tori</span>
+                <span className="icon">
+                  <i className="fas fa-angle-double-right"></i>
+                </span>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link id="rsvp" to="/rsvp" className="nav-link">
                 <span className="icon">

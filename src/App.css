@@ -63,6 +63,40 @@ i {
   z-index: 1;
 }
 
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--pink);
+  background: var(--blue);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo i {
+  color: var(--pink);
+  transform: rotate(0deg);
+  transition: 200ms;
+}
+
+.logo-text {
+  display: none;
+  color: var(--pink);
+  position: absolute;
+  transition: 200ms;
+  left: -999px;
+}
+
+navbar:hover .logo-text {
+  display: inline;
+}
+
+.navbar:hover .logo i {
+  transform: rotate(-180deg);
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
   .navbar {
