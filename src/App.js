@@ -12,7 +12,7 @@ function App() {
             <li className="nav-item">
               <Link id="rsvp" to="/rsvp" className="nav-link">
                 <span className="icon">
-                  <i class="fas fa-check"></i>
+                  <i className="fas fa-check"></i>
                 </span>
                 <span className="link-text">RSVP</span>
               </Link>
@@ -20,7 +20,7 @@ function App() {
             <li className="nav-item">
               <Link id="info" to="/info" className="nav-link">
                 <span className="icon">
-                  <i class="fas fa-info-circle"></i>
+                  <i className="fas fa-info-circle"></i>
                 </span>
                 <span className="link-text">Info</span>
               </Link>
@@ -28,7 +28,7 @@ function App() {
             <li className="nav-item">
               <Link id="registry" to="/registry" className="nav-link">
                 <span className="icon">
-                  <i class="fas fa-gifts"></i>
+                  <i className="fas fa-gifts"></i>
                 </span>
                 <span className="link-text">Registry</span>
               </Link>
@@ -36,7 +36,7 @@ function App() {
             <li className="nav-item">
               <Link id="about" to="/about" className="nav-link">
                 <span className="icon">
-                  <i class="fas fa-book"></i>
+                  <i className="fas fa-book"></i>
                 </span>
                 <span className="link-text">About</span>
               </Link>

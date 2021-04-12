@@ -3,7 +3,7 @@ import RSVP from "./RSVP";
 import Registry from "./Registry";
 import About from "./About";
 import Info from "./Info";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 const Main = (props) => {
   return (
@@ -14,18 +14,18 @@ const Main = (props) => {
           <div className="max-w-md mx-auto">
             <div className="text-2xl font-semibold text-blue">
               <Switch>
-                <Route path="/rsvp">
-                  <RSVP />
-                </Route>
-                <Route path="/info">
-                  <Info />
-                </Route>
-                <Route path="/registry">
-                  <Registry />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
+                <Route
+                  exact
+                  path="/"
+                  component={RSVP}
+                  render={() => {
+                    <Redirect to="rsvp" />;
+                  }}
+                />
+                <Route path="/rsvp" component={RSVP} />
+                <Route path="/info" component={Info} />
+                <Route path="/registry" component={Registry} />
+                <Route path="/about" component={About} />
               </Switch>
             </div>
           </div>
