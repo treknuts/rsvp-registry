@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [isRSVP, setIsRSVP] = useState(true);
@@ -41,63 +42,44 @@ function App() {
 
   return (
     <div className="w-screen h-screen m-0 p-0 overflow-x-hidden overflow-y-scroll">
-      <div className="bg-green md:bg-pink-200 text-blue font-semibold rounded-2xl fixed flex bottom-0 h-12 w-screen md:h-26 justify-center md:flex-col md:justify-evenly md:left-0 md:h-screen md:w-48 transition-transform z-10 md:transition md:transform md:hover:translate-x-1">
-        <ul className="relative flex justify-evenly md:flex-col">
-          <li
-            id="rsvp"
-            onClick={handleClick}
-            className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 items-center focus:outline-black"
-          >
-            <span className="hidden md:contents">RSVP</span>
-            <FontAwesomeIcon
-              id="rsvp"
-              onClick={handleClick}
-              className="color-blue lg:mx-auto"
-              icon={faCheck}
-              pull="left"
-            />
+      <div className="navbar">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <a id="rsvp" onClick={handleClick} href="#" className="nav-link">
+              <span className="icon">
+                <i class="fas fa-check"></i>
+              </span>
+              <span className="link-text">RSVP</span>
+            </a>
           </li>
-          <li
-            id="info"
-            onClick={handleClick}
-            className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
-          >
-            <span className="hidden md:contents">Info</span>
-            <FontAwesomeIcon
-              id="info"
-              onClick={handleClick}
-              className="my-auto lg:mx-auto"
-              icon={faInfoCircle}
-              pull="left"
-            />
+          <li className="nav-item">
+            <a id="info" onClick={handleClick} href="#" className="nav-link">
+              <span className="icon">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <span className="link-text">Info</span>
+            </a>
           </li>
-          <li
-            id="registry"
-            onClick={handleClick}
-            className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
-          >
-            <span className="hidden md:contents">Registry</span>
-            <FontAwesomeIcon
+          <li className="nav-item">
+            <a
               id="registry"
               onClick={handleClick}
-              className="my-auto lg:mx-auto"
-              icon={faGifts}
-              pull="left"
-            />
+              href="#"
+              className="nav-link"
+            >
+              <span className="icon">
+                <i class="fas fa-gifts"></i>
+              </span>
+              <span className="link-text">Registry</span>
+            </a>
           </li>
-          <li
-            id="about"
-            onClick={handleClick}
-            className="flex md:pl-8 p-3 font-bold rounded-full md:rounded-lg w-full cursor-pointer mx-4 md:my-12 hover:bg-blue hover:text-pink-200 focus:outline-none"
-          >
-            <span className="hidden md:contents">Our Story</span>
-            <FontAwesomeIcon
-              id="about"
-              className="color-blue my-auto lg:mx-auto"
-              onClick={handleClick}
-              pull="left"
-              icon={faBook}
-            />
+          <li className="nav-item">
+            <a id="about" onClick={handleClick} href="#" className="nav-link">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <span className="link-text">About</span>
+            </a>
           </li>
         </ul>
       </div>
