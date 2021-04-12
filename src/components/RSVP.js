@@ -189,7 +189,11 @@ const RSVP = () => {
                 onChange={handleChange}
               >
                 {[1, 2, 3, 4, 5].map((num) => {
-                  return <option key={num} value={num}>{num}</option>;
+                  return (
+                    <option key={num} value={num}>
+                      {num}
+                    </option>
+                  );
                 })}
               </select>
             </div>
@@ -269,7 +273,11 @@ const RSVP = () => {
                 onChange={handleChange}
               >
                 {states.map((state) => {
-                  return <option key={state} value={state}>{state}</option>;
+                  return (
+                    <option key={state} value={state}>
+                      {state}
+                    </option>
+                  );
                 })}
               </select>
             </div>
@@ -301,7 +309,7 @@ const RSVP = () => {
                 type="button"
                 onClick={handleForm}
               >
-                Register!
+                RSVP!
               </button>
             </div>
           </div>
