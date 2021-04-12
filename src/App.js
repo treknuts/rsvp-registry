@@ -43,12 +43,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <Main
-          isRSVP={isRSVP}
-          isInfo={isInfo}
-          isRegistry={isRegistry}
-          isAbout={isAbout}
-        />
+        <Main />
       </BrowserRouter>
     </div>
   );
