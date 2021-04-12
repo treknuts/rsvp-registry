@@ -3,6 +3,7 @@ import RSVP from "./RSVP";
 import Registry from "./Registry";
 import About from "./About";
 import Info from "./Info";
+import { Route, Switch } from "react-router-dom";
 
 const Main = (props) => {
   return (
@@ -12,10 +13,20 @@ const Main = (props) => {
         <div className="relative px-4 py-10 bg-pink-200 shadow-2xl sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div className="text-2xl font-semibold text-blue">
-              {props.isRSVP && <RSVP />}
-              {props.isInfo && <Info />}
-              {props.isRegistry && <Registry />}
-              {props.isAbout && <About />}
+              <Switch>
+                <Route path="/rsvp">
+                  <RSVP />
+                </Route>
+                <Route path="/info">
+                  <Info />
+                </Route>
+                <Route path="/registry">
+                  <Registry />
+                </Route>
+                <Route path="/about">
+                  <About />
+                </Route>
+              </Switch>
             </div>
           </div>
         </div>
