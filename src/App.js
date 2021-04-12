@@ -1,5 +1,5 @@
 import Main from "./components/Main";
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import "./App.css";
 
