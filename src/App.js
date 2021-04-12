@@ -1,11 +1,4 @@
 import Main from "./components/Main";
-import {
-  faCheck,
-  faBook,
-  faGifts,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./App.css";
 

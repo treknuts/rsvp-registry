@@ -82,10 +82,6 @@ i {
   .nav-link {
     justify-content: center;
   }
-
-  .nav-item:last-child {
-    display: none;
-  }
 }
 
 /* Large screens */
