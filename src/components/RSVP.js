@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "./Modal";
 
 const RSVP = () => {
   const [firstName, setFirstName] = useState("");
@@ -10,6 +11,8 @@ const RSVP = () => {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
+
+  const [show, setShow] = useState(false);
 
   const states = [
     "Alabama",
@@ -108,9 +111,41 @@ const RSVP = () => {
     );
   };
 
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const hideModal = () => {
+    setShow(false);
+  };
+
   return (
     <div>
       <form className="font-normal w-full max-w-lg">
+        <Modal show={show} handleClose={hideModal} handleSubmit={handleForm}>
+          <p className="text-3xl font-light text-blue m-8">
+            Please confirm the following is correct
+          </p>
+          <ul className="mx-12 my-8 text-xl text-blue">
+            <li className="flex my-1">
+              <p className="font-semibold">Name:&nbsp;</p> {firstName}{" "}
+              {lastName}
+            </li>
+            <li className="flex my-1">
+              <p className="font-semibold">Email:&nbsp;</p>
+              {email}
+            </li>
+            <li className="flex my-1">
+              <p className="font-semibold">Members attending:&nbsp;</p>{" "}
+              {members}
+            </li>
+            <li className="flex my-1">
+              <p className="font-semibold">Address:&nbsp;</p>
+              {addrLine1}, {addrLine2}
+              <br /> {city}, {state} {zip}
+            </li>
+          </ul>
+        </Modal>
         <h1 className="lg:text-2xl text-lg font-light mb-12">
           Let us know you're coming!
         </h1>
@@ -307,7 +342,7 @@ const RSVP = () => {
               <button
                 className="shadow bg-blue hover:bg-green focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 type="button"
-                onClick={handleForm}
+                onClick={showModal}
               >
                 RSVP!
               </button>
