@@ -98,7 +98,7 @@ navbar:hover .logo-text {
 }
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     bottom: 0;
     width: 100vw;
@@ -120,7 +120,7 @@ navbar:hover .logo-text {
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .navbar {
     top: 0;
     width: 5rem;

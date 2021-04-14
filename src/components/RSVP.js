@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 
-const RSVP = () => {
+const RSVP = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -109,6 +109,7 @@ const RSVP = () => {
       \t\t${addrLine1}, ${addrLine2}\n
       \t\t${city}, ${state} ${zip}`
     );
+    props.history.push('/info');
   };
 
   const showModal = () => {
@@ -117,34 +118,26 @@ const RSVP = () => {
 
   const hideModal = () => {
     setShow(false);
+    props.history.push('/rsvp');
   };
 
   return (
     <div>
       <form className="font-normal w-full max-w-lg">
         <Modal show={show} handleClose={hideModal} handleSubmit={handleForm}>
-          <p className="text-3xl font-light text-blue m-8">
+          <p className="text-center md:col-span-2 text-xl md:text-3xl font-light text-blue md:m-8">
             Please confirm the following is correct
           </p>
-          <ul className="mx-12 my-8 text-xl text-blue">
-            <li className="flex my-1">
-              <p className="font-semibold">Name:&nbsp;</p> {firstName}{" "}
-              {lastName}
-            </li>
-            <li className="flex my-1">
-              <p className="font-semibold">Email:&nbsp;</p>
-              {email}
-            </li>
-            <li className="flex my-1">
-              <p className="font-semibold">Members attending:&nbsp;</p>{" "}
-              {members}
-            </li>
-            <li className="flex my-1">
-              <p className="font-semibold">Address:&nbsp;</p>
-              {addrLine1}, {addrLine2}
-              <br /> {city}, {state} {zip}
-            </li>
-          </ul>
+          <p className="font-semibold text-lg md:text-xl">Name:</p>
+          <p className="text-lg md:text-xl">{firstName}{" "}{lastName}</p>
+          <p className="font-semibold text-lg md:text-xl">Email:</p>
+          <p className="text-lg md:text-xl">{email}</p>
+          <p className="font-semibold text-lg md:text-xl">Members attending:</p>
+          <p className="text-lg md:text-xl">{members}</p>
+          <p className="font-semibold text-lg md:text-xl">Address:</p>
+          <p className="text-lg md:text-xl">{addrLine1}{addrLine2 && ", " + addrLine2}</p>
+          <p></p>
+          <p className="text-lg md:text-xl">{city}, {state}{" "}{zip}</p>
         </Modal>
         <h1 className="lg:text-2xl text-lg font-light mb-12">
           Let us know you're coming!

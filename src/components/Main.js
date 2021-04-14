@@ -14,7 +14,7 @@ const Main = (props) => {
           <div className="max-w-md mx-auto">
             <div className="text-2xl font-semibold text-blue">
               <Switch>
-                <Route exact path="/" component={RSVP} />
+                <Route exact path="/" history={props.history} component={RSVP} />
                 <Route path="/rsvp" component={RSVP} />
                 <Route path="/info" component={Info} />
                 <Route path="/registry" component={Registry} />
