@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
+import addRsvp from "../services/rsvpService";
+import states from "../states";
 
 const RSVP = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -11,70 +13,7 @@ const RSVP = (props) => {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
-
   const [show, setShow] = useState(false);
-
-  const states = [
-    "Alabama",
-    "Alaska",
-    "American Samoa",
-    "Arizona",
-    "Arkansas",
-    "California",
-    "Colorado",
-    "Connecticut",
-    "Delaware",
-    "District of Columbia",
-    "Federated States of Micronesia",
-    "Florida",
-    "Georgia",
-    "Guam",
-    "Hawaii",
-    "Idaho",
-    "Illinois",
-    "Indiana",
-    "Iowa",
-    "Kansas",
-    "Kentucky",
-    "Louisiana",
-    "Maine",
-    "Marshall Islands",
-    "Maryland",
-    "Massachusetts",
-    "Michigan",
-    "Minnesota",
-    "Mississippi",
-    "Missouri",
-    "Montana",
-    "Nebraska",
-    "Nevada",
-    "New Hampshire",
-    "New Jersey",
-    "New Mexico",
-    "New York",
-    "North Carolina",
-    "North Dakota",
-    "Northern Mariana Islands",
-    "Ohio",
-    "Oklahoma",
-    "Oregon",
-    "Palau",
-    "Pennsylvania",
-    "Puerto Rico",
-    "Rhode Island",
-    "South Carolina",
-    "South Dakota",
-    "Tennessee",
-    "Texas",
-    "Utah",
-    "Vermont",
-    "Virgin Island",
-    "Virginia",
-    "Washington",
-    "West Virginia",
-    "Wisconsin",
-    "Wyoming",
-  ];
 
   const handleChange = (e) => {
     if (e.target.id === "first-name") {
@@ -98,18 +37,18 @@ const RSVP = (props) => {
     }
   };
 
-  const handleForm = () => {
-    alert(
-      `Form values are:\n
-      \tFirst Name: ${firstName}\n
-      \tLast Name: ${lastName}\n
-      \tEmail: ${email}\n
-      \tMembers: ${members}\n
-      \tAddress: \n
-      \t\t${addrLine1}, ${addrLine2}\n
-      \t\t${city}, ${state} ${zip}`
-    );
-    props.history.push('/info');
+  const handleForm = async () => {
+    props.history.push("/info");
+    const info = {
+      name: `${firstName} ${lastName}`,
+      email: email,
+      members: members,
+      streetAddress: `${addrLine1} ${addrLine2}`,
+      city: city,
+      state: state,
+      zip: zip,
+    };
+    addRsvp(info);
   };
 
   const showModal = () => {
@@ -118,7 +57,7 @@ const RSVP = (props) => {
 
   const hideModal = () => {
     setShow(false);
-    props.history.push('/rsvp');
+    props.history.push("/rsvp");
   };
 
   return (
@@ -129,15 +68,22 @@ const RSVP = (props) => {
             Please confirm the following is correct
           </p>
           <p className="font-semibold text-lg md:text-xl">Name:</p>
-          <p className="text-lg md:text-xl">{firstName}{" "}{lastName}</p>
+          <p className="text-lg md:text-xl">
+            {firstName} {lastName}
+          </p>
           <p className="font-semibold text-lg md:text-xl">Email:</p>
           <p className="text-lg md:text-xl">{email}</p>
           <p className="font-semibold text-lg md:text-xl">Members attending:</p>
           <p className="text-lg md:text-xl">{members}</p>
           <p className="font-semibold text-lg md:text-xl">Address:</p>
-          <p className="text-lg md:text-xl">{addrLine1}{addrLine2 && ", " + addrLine2}</p>
+          <p className="text-lg md:text-xl">
+            {addrLine1}
+            {addrLine2 && ", " + addrLine2}
+          </p>
           <p></p>
-          <p className="text-lg md:text-xl">{city}, {state}{" "}{zip}</p>
+          <p className="text-lg md:text-xl">
+            {city}, {state} {zip}
+          </p>
         </Modal>
         <h1 className="lg:text-2xl text-lg font-light mb-12">
           Let us know you're coming!
@@ -302,8 +248,8 @@ const RSVP = (props) => {
               >
                 {states.map((state) => {
                   return (
-                    <option key={state} value={state}>
-                      {state}
+                    <option key={state.abbreviation} value={state.name}>
+                      {state.name} - {state.abbreviation}
                     </option>
                   );
                 })}
