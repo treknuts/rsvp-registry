@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="w-screen h-screen m-0 p-0 overflow-x-hidden overflow-y-scroll">
+    <div className="m-0 p-0 overflow-x-hidden overflow-y-scroll flex items-center">
       <BrowserRouter>
         <div className="navbar">
           <ul className="navbar-nav">
