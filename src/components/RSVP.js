@@ -4,7 +4,6 @@ import addRsvp from "../services/rsvpService";
 const RSVP = (props) => {
   const [familyName, setFamilyName] = useState("");
   const [members, setMembers] = useState(1);
-  const [show, setShow] = useState(false);
 
   const handleChange = (e) => {
     if (e.target.id === "first-name") {
@@ -22,16 +21,6 @@ const RSVP = (props) => {
     };
     addRsvp(info);
   };
-
-  const showModal = () => {
-    setShow(true);
-  };
-
-  const hideModal = () => {
-    setShow(false);
-    props.history.push("/rsvp");
-  };
-
 
   // add Boostrap Modal to confirm
   return (
