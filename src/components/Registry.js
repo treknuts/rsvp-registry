@@ -16,7 +16,7 @@ const Registry = () => {
         </a>
         <a
           className="btn btn-warning mb-2"
-          href="https://www.target.com/gift-registry/dashboard?registryId=924f8bfa420d42a58e4b2ec92abe4fa6&newRegistry=true"
+          href="https://www.target.com/gift-registry/gift-giver?registryId=509d6ce0-91c2-11ec-8f8b-f11c36c712e6&type=WEDDING"
         >
           Target
         </a>
