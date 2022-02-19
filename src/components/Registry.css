@@ -1,9 +1,9 @@
-.list-group {
-  width: 60%;
+.registry-buttons {
+  width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .list-group {
+  .registry-buttons {
     width: 100%;
   }
 }

@@ -62,7 +62,7 @@ function App() {
             </div>
           </div>
         </nav>
-        <main className="min-vh-100 p-md-0 p-2 d-flex flex-column justify-content-center align-items-center">
+        <main className="min-vh-100 p-md-0 p-4 d-flex flex-column justify-content-center align-items-center">
           <Main />
         </main>
       </BrowserRouter>
