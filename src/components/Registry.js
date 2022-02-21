@@ -3,9 +3,8 @@ import "./Registry.css";
 const Registry = () => {
   return (
     <div className="main-content bg-light rounded shadow p-5">
-      <p className="mb-4">
-        Trevor and Victoria are registered at Target, Amazon, and Amazon. You
-        can view both registries through the links below.
+      <p className="text-center mb-4">
+        Victoria and Trevor are registered at the following retailers.
       </p>
       <div className="d-flex flex-column justify-content-center registry-buttons mx-auto">
         <a
