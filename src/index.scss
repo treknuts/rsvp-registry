@@ -42,11 +42,6 @@ p {
 }
 
 .main-content {
-  width: 40rem;
-}
-
-@media screen and (max-width: 768px) {
-  .main-content {
-    width: 100%;
-  }
+  box-sizing: border-box;
+  width: min(100% - 0.5rem, 800px);
 }
