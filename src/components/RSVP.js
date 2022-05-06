@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import addRsvp from "../services/rsvpService";
 import { Countdown } from "./Countdown";
 
@@ -28,7 +29,7 @@ const RSVP = (props) => {
   return (
     <div className='main-content p-2 p-md-4 rounded shadow bg-light'>
       <div className='row'>
-        <form className='col-12 col-md-6'>
+        <form className='col-12 col-md-6 order-second order-md-first'>
           <h3 className='text-center'>RSVP</h3>
           <label className='text-muted' htmlFor='first-name'>
             Family Name
@@ -43,7 +44,7 @@ const RSVP = (props) => {
             />
           </div>
           <div>
-            <label className=' text-muted' htmlFor='members'>
+            <label className='text-muted' htmlFor='members'>
               Number Attending
             </label>
             <div className='input-group mb-3'>
@@ -76,17 +77,14 @@ const RSVP = (props) => {
             </div>
           </div>
         </form>
-        <div className='col-12 col-md-6 text-center d-flex flex-column justify-content-center'>
-          <h3>
-            <strong>Attention</strong>
-          </h3>
-          <p className='bigger-text'>
-            We are also sending physical RSVPs so we can get an accurate count
-            of each type of meal. Please fill those out and send them back by{" "}
-            <code>May 25th</code>
+        <div className='col-12 col-md-6 mb-4 text-center d-flex flex-column justify-content-center order-first order-md-second'>
+          <h3 className='mb-0 mb-md-4'>Attention</h3>
+          <p className='bigger-text mb-4'>
+            Keep an eye out for a physical RSVP we are mailing out. Please
+            provide an updated head count and meal selections. Send it back by{" "}
+            <code>May 25th</code> so you're guaranteed the meal you want. You
+            can see meal options <Link to='/info'>here</Link>.
           </p>
-          <br />
-          <br />
           <Countdown targetDate={deadline} />
         </div>
       </div>
