@@ -4,6 +4,7 @@ import {
   faClock,
   faCalendar,
   faLocationArrow,
+  faBed,
 } from "@fortawesome/free-solid-svg-icons";
 import "./info.css";
 
@@ -40,6 +41,16 @@ const Info = () => {
             target='_blank'
           >
             Hilton Garden Inn, Fargo
+          </a>
+        </li>
+        <li className='list-group-item d-flex justify-content-between align-items-center'>
+          <FontAwesomeIcon className='text-warning' icon={faBed} size='lg' />
+          <a
+            href='https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fl.h4.hilton.com%2Frts%2Fgo2.aspx%3Fh%3D1993650%26tp%3Di-16D9-Ak-QW4-9wJEYq-24-izWDC-1c-l7ANqpGmcr-1SIfdV%26x%3Dwww.my-event.hilton.com%2Ffargigi-fkr-c4db70d0-f2de-428d-934e-1182e789a6a0%2F&data=04%7C01%7Cneedham%40raymondteam.com%7C1dc37134e3664acaea4808d9f303b268%7C2d6d69e47c344f719340836656af8d60%7C0%7C1%7C637808019495867655%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=yDTts5rh%2BLQ1vVloB6nnebuAY0tlqxsFVzAXaK1sCS4%3D&reserved=0'
+            rel='noreferrer'
+            target='_blank'
+          >
+            Book your room!
           </a>
         </li>
         <li className='list-group-item d-flex align-items-center justify-content-between'>
