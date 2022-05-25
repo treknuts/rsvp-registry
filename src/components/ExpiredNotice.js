@@ -1,11 +1,11 @@
 const ExpiredNotice = () => {
   return (
     <div>
-      <h6>Uh oh!</h6>
+      <h3>Uh oh!</h3>
       <p>
-        If you have not mailed your RSVP yet please do so ASAP. We will have
-        extra meal cards at the venue but we cannot guarantee you will get the
-        meal you want.
+        If you have not mailed your RSVP back, we cannot guarantee there will be
+        a meal available. Meals will be served on a first come, first serve
+        basis.
       </p>
     </div>
   );
