@@ -1,13 +1,10 @@
 import Announcements from "./Announcements";
-import RSVP from "./RSVP";
-const Home = (props) => {
+
+const Home = () => {
   return (
-    <div className='main-content p-2 p-md-4 rounded shadow bg-light'>
-      <div className='row'>
-        <RSVP history={props.history} />
-        <Announcements />
-      </div>
-    </div>
+    <section className='main-content d-flex justify-content-center align-items-center p-2 p-md-4 rounded shadow bg-light'>
+      <Announcements />
+    </section>
   );
 };
 

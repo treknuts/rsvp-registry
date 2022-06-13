@@ -27,7 +27,7 @@ const Info = () => {
     set4Collapsed(!fourCollapsed);
   };
   return (
-    <div className='main-content mt-4 mt-md-0 p-2 p-md-5 rounded shadow bg-light'>
+    <section className='main-content mt-4 p-2 p-md-5 rounded shadow bg-light'>
       <ul className='list-group mx-auto'>
         <li className='list-group-item d-flex justify-content-between align-items-center'>
           <FontAwesomeIcon
@@ -97,7 +97,7 @@ const Info = () => {
               aria-labelledby='headingOne'
               data-bs-parent='#accordionExample'
             >
-              <div class='accordion-body'>
+              <div className='accordion-body'>
                 <strong>A:</strong>&nbsp;The reception starts at{" "}
                 <code>5:00pm</code> with a social hour followed by dinner at{" "}
                 <code>6:00pm</code>. Last, but not least, the dance will start
@@ -105,8 +105,8 @@ const Info = () => {
               </div>
             </div>
           </div>
-          <div class='accordion-item'>
-            <h2 class='accordion-header' id='headingTwo'>
+          <div className='accordion-item'>
+            <h2 className='accordion-header' id='headingTwo'>
               <button
                 className={`accordion-button ${
                   twoCollapsed ? "collapsed" : ""
@@ -131,7 +131,7 @@ const Info = () => {
               aria-labelledby='headingTwo'
               data-bs-parent='#accordionExample'
             >
-              <div class='accordion-body'>
+              <div className='accordion-body'>
                 <strong>A:</strong>&nbsp;We are offering a plated dinner with a
                 couple options:
                 <ul>
@@ -151,8 +151,8 @@ const Info = () => {
               </div>
             </div>
           </div>
-          <div class='accordion-item'>
-            <h2 class='accordion-header' id='headingThree'>
+          <div className='accordion-item'>
+            <h2 className='accordion-header' id='headingThree'>
               <button
                 className={`accordion-button ${
                   threeCollapsed ? "collapsed" : ""
@@ -178,7 +178,7 @@ const Info = () => {
               aria-labelledby='headingThree'
               data-bs-parent='#accordionExample'
             >
-              <div class='accordion-body'>
+              <div className='accordion-body'>
                 <strong>A:</strong>&nbsp;There will be a <em>Kids Corner</em>{" "}
                 set up right outside the reception hall. Your kiddos will have a
                 dedicated space to play and socialize. Kids are more than
@@ -187,8 +187,8 @@ const Info = () => {
               </div>
             </div>
           </div>
-          <div class='accordion-item'>
-            <h2 class='accordion-header' id='headingThree'>
+          <div className='accordion-item'>
+            <h2 className='accordion-header' id='headingThree'>
               <button
                 className={`accordion-button ${
                   fourCollapsed ? "collapsed" : ""
@@ -235,7 +235,7 @@ const Info = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

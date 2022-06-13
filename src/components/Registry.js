@@ -5,7 +5,7 @@ import TargetSVG from "./TargetSVG";
 
 const Registry = () => {
   return (
-    <div className='main-content bg-light rounded shadow p-2 p-md-5'>
+    <section className='main-content mt-4 bg-light rounded shadow p-2 p-md-5'>
       <div className='row d-flex align-items-center '>
         <p className='text-center col mb-4'>
           Victoria and Trevor are registered at the following retailers. Gifts
@@ -28,7 +28,7 @@ const Registry = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
